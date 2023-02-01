@@ -20,5 +20,9 @@ module "NAT-part" {
 
 module "PrivateVMInstance" {
   source = "./VM private instance"
-  
+  instance_name="private-vm"
+  instance_vm_type = "e2-micro"
+  network_name = module.VPC-subnets.vpc_name
+  subnet_name = module.VPC-subnets.mangement-name
+  zone_for_instance="us-central1-a"
 }

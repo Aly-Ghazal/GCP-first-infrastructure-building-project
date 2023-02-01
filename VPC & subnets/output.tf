@@ -7,3 +7,6 @@ output "management-region" {
 output "mangement-name" {
     value = google_compute_subnetwork.mangement_subnet.name
 }
+output "vpc_name" {
+  value = google_compute_network.vpc_network.name
+}
