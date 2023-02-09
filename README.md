@@ -47,7 +47,7 @@ The aim of this project is to build full infrastructure to deploy a python app i
       - Leave the "Key Type" as JSON.
       - Click "Create" to create the key and save the key file to your system.
   
-2. Clone current repository [https://github.com/Aly-Ghazal/GCP-project](https://github.com/Aly-Ghazal/GCP-first-infrastructure-building-project)
+2. Clone current repository [GCP first infrastructure building project](https://github.com/Aly-Ghazal/GCP-first-infrastructure-building-project)
 
     Note: Don't forget to copy credintial key to this directory and chenge it in code and also change project id with project id you created
 
