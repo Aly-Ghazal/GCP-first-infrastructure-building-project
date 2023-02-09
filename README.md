@@ -67,6 +67,7 @@ The aim of this project is to build full infrastructure to deploy a python app i
     TO BUILD IMAGE
 
     ``` bash
+    cp Dockerfile /DevOps-Challenge-Demo-Code/Dockerfile
     cd Devops-Challenge-Demo-Code
     # tag should be hostname/projectID/imgName
     docker build . -t us.gcr.io/<project_id>/python-sample-app:v1.0 
