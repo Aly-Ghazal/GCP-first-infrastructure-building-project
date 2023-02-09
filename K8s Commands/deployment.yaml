@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-deployment
+  labels:
+    app: python
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python
+  template:
+    metadata:
+      labels:
+        app: python
+    spec:
+      containers:
+      - name: simple-app-python
+        image: us.gcr.io/aly-ahmed-gcp-project/alyghazal22/simpleapp:v1.2
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - configMapRef: 
+           name: python-env
+      - name: redis
+        image: redis
+        ports:
+        - containerPort: 6379

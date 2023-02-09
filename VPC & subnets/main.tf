@@ -19,12 +19,14 @@ resource "google_compute_subnetwork" "restricted_subnet" {
   network       = google_compute_network.vpc_network.id
   stack_type    = var.StackType
   region        = "us-central1"
+  private_ip_google_access = true
 }
 
 resource "google_compute_firewall" "internetAccess" {
   name = "internet-access"
   network = google_compute_network.vpc_network.name
-  source_ranges = [google_compute_subnetwork.mangement_subnet.ip_cidr_range]
+  source_ranges = ["0.0.0.0/0"]
+  #google_compute_subnetwork.mangement_subnet.ip_cidr_range]
   allow {
     protocol = var.requiredProtocol
     ports = ["0-65535"]
@@ -46,5 +48,4 @@ resource "google_compute_firewall" "sshAccess" {
     protocol = var.requiredProtocol
     ports = ["22"]
   }
-
 }

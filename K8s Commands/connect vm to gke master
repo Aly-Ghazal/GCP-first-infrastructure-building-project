@@ -1,0 +1,3 @@
+1- sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin
+2- sudo apt-get install kubectl
+3- gcloud container clusters get-credentials gke-project-cluster --zone us-central1-c --project aly-ahmed-gcp-project

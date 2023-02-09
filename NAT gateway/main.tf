@@ -14,6 +14,5 @@ resource "google_compute_router_nat" "my-router-nat" {
   subnetwork {
     name = var.subnet-to-link-with-nat
     source_ip_ranges_to_nat = ["ALL_IP_RANGES"]
-  }
-   
+  }  
 }
