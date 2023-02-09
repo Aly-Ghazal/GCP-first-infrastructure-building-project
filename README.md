@@ -13,7 +13,7 @@ The aim of this project is to build full infrastructure to deploy a python app i
 1. GCP account
     You would require to have an GCP account to be able to build cloud infrastructure.
 
-2. VS code editor (with Terraform extension)
+2. VS code editor (with Terraform extension for auto complete)
     An editor would be helpful to visualize the image as well as code.
 
 3. Terraform
